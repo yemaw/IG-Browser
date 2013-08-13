@@ -39,7 +39,7 @@
 @property (strong, nonatomic) NSMutableArray *data_comments;
 
 
-
+- (IBAction)actionBackToListView:(id)sender;
 @property (strong, nonatomic) FavoritesController *controller;
 @property (strong, nonatomic) FavoritePhoto *data;
 

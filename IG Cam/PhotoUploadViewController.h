@@ -1,12 +1,13 @@
 //
-//  FavoritesViewController.h
+//  PhotoUploadViewController.h
 //  IG Cam
 //
-//  Created by YeMaw on 8/8/13.
+//  Created by YeMaw on 12/8/13.
 //  Copyright (c) 2013 Ye Maw. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "MGInstagram.h"
 
 #import "UIColor+FlatUI.h"
 #import "UISlider+FlatUI.h"
@@ -21,22 +22,16 @@
 #import "UIProgressView+FlatUI.h"
 #import "FUISegmentedControl.h"
 #import "UIPopoverController+FlatUI.h"
-#import "UITableViewCell+FlatUI.h"
-
-#import "IGPhoto.h"
-#import "FavoritePhoto.h"
-#import "FavoritesController.h"
-#import "FavoriteViewController.h"
-
-@interface FavoriteListViewController : UIViewController
-{
-
-}
 
 
-@property (weak, nonatomic) IBOutlet UITableView *ui_tableview_listview;
+@interface PhotoUploadViewController : UIViewController
 
-@property (strong, nonatomic) NSMutableArray *data_list;
-@property (strong, nonatomic) FavoritesController *controller;
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *ui_imageview;
+
+@property (strong, nonatomic) UIImage *photo;
+
+-(UIImage *)scaleImage:(UIImage *)image toSize:(CGSize)newSize;
 
 @end

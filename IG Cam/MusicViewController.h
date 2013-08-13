@@ -23,10 +23,17 @@
 #import "UIPopoverController+FlatUI.h"
 #import "UITableViewCell+FlatUI.h"
 
-@interface MusicViewController : UIViewController
-@property (weak, nonatomic) IBOutlet FUIButton *ui_button_musicswitch;
+#import "PhotoUploadViewController.h"
+
+@interface MusicViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet FUIButton *ui_button_library;
+@property (weak, nonatomic) IBOutlet FUIButton *ui_button_camera;
+
+
 - (IBAction)actionMucic:(id)sender;
 
+- (IBAction)getPhotoFromCamera:(id)sender;
+- (IBAction)getPhotoFromLibrary:(id)sender;
 
 -(void)playMusic;
 -(void)pauseMusic;

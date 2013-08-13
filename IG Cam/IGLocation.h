@@ -15,6 +15,7 @@
 
 @property (nonatomic) NSMutableString *longitude;
 @property (nonatomic) NSMutableString *latitude;
-
+@property (nonatomic) NSMutableString *name;
+@property (nonatomic) NSMutableString *location_id;
 
 @end

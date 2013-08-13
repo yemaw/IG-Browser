@@ -11,6 +11,7 @@
 #import "AppGlobal.h"
 #import "SBJsonParser.h"
 #import "IGPhoto.h"
+#import "IGLocation.h"
 #import "AppDelegate.h"
 #import "WelcomeViewController.h"
 
@@ -21,5 +22,11 @@
 -(NSMutableArray *)loadDataForTagName:(NSString *)tag;
 -(void)loadDataForLocationId:(NSString *)location;
 -(NSMutableArray *)loadDataFromURLString:(NSString *)urlString;
+-(NSMutableArray *)loadDataFromNextURL;
+
+@property (nonatomic) NSMutableString *next_page_url;
+
 -(BOOL)testAccessToken;
+
+
 @end

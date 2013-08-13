@@ -36,9 +36,19 @@
 {
     [super viewDidLoad];
     
+    self.data_controller = [[PhotoDataController alloc] init];
+    self.data_list = [[NSMutableArray alloc] init];
+    self.image_cache = [ImageCache sharedImageCache];
+
+    if([self.data_controller testAccessToken] == NO){
+        WelcomeViewController *c = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomeViewControllerRootBoardID"];
+        [[[UIApplication sharedApplication] delegate] window].rootViewController = c;
+        return;
+    }
+
     //Music Button Item
-    UIImage* music_img = [UIImage imageNamed:@"play_btn.png"];
-    CGRect frame_img1 = CGRectMake(0, 0, 40, 20);
+    UIImage* music_img = [UIImage imageNamed:@"camera.png"];
+    CGRect frame_img1 = CGRectMake(0, 0, 36, 15);
     UIButton *music_btn = [[UIButton alloc] initWithFrame:frame_img1];
     [music_btn setBackgroundImage:music_img forState:UIControlStateNormal];
     [music_btn addTarget:self action:@selector(gotoMusicView)
@@ -49,15 +59,6 @@
     
     [self decorateUI];
 
-    self.data_controller = [[PhotoDataController alloc] init];
-    self.data_list = [[NSMutableArray alloc] init];
-    
-    
-    if([self.data_controller testAccessToken] == NO){
-        WelcomeViewController *c = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomeViewControllerRootBoardID"];
-        [[[UIApplication sharedApplication] delegate] window].rootViewController = c;
-    }
-    
     
     //Favorite Button
     UIImage* favorite_img = [UIImage imageNamed:@"favorite_btn.png"];
@@ -77,6 +78,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    NSLog(@"end");
     [self.ui_searchbar resignFirstResponder];
     [self.view endEditing:YES];
 }
@@ -93,8 +95,16 @@
     self.data_list = nil;
     [self.ui_collectionview reloadData];
     
-    self.data_list = [self.data_controller loadDataForTagName:searchBar.text];
-    [self.ui_collectionview reloadData];
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    dispatch_async(queue, ^{
+        self.data_list = [self.data_controller loadDataForTagName:searchBar.text];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self.ui_collectionview reloadData];
+        });
+    });
+    
+    
 }
 /*
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
@@ -115,6 +125,24 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+
+    if(([indexPath row]+1) == self.data_list.count){
+
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+        dispatch_async(queue, ^{
+            NSMutableArray *temp = [self.data_controller loadDataFromNextURL];
+            for(int i=0; i<temp.count;i++)
+            {
+                [self.data_list addObject:[temp objectAtIndex:i]];
+//                NSLog(@"current count is -> %i", self.data_list.count);
+            }
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [self.ui_collectionview reloadData];
+            });
+        });
+        
+    }
+    
     static NSString *identifier = @"ImageThumbnailCellSBID";
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
@@ -123,15 +151,27 @@
     
     IGPhoto *photo = [self.data_list objectAtIndex:indexPath.row];
     NSString *imageUrl = photo.image_thumbnail_url;
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
-    dispatch_async(queue, ^{
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:
-                                                 [NSURL URLWithString:imageUrl]]];
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            thumbnail.image = image;
-            [cell setNeedsLayout];
+
+    if ([[ImageCache sharedImageCache] DoesExist:imageUrl] == true)
+    {
+        thumbnail.image = [[ImageCache sharedImageCache] GetImage:imageUrl];
+    } else {
+        //NSURL *url = [[NSBundle mainBundle] URLForResource:@"loding" withExtension:@"gif"];
+        //thumbnail.image = [UIImage animatedImageWithAnimatedGIFURL:url];
+        thumbnail.image = [UIImage imageNamed:@"loding.gif"];
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+        dispatch_async(queue, ^{
+            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:
+                                                     [NSURL URLWithString:imageUrl]]];
+            [self.image_cache AddURL:imageUrl forImage:image];
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                thumbnail.image = image;
+                [cell setNeedsLayout];
+            });
         });
-    });
+    }
+    
+    
     /*
     if (imageUrl) {
         if ([[ImageStore sharedStore] imageForKey:imageUrl]) {
@@ -157,6 +197,8 @@
     
     
 }
+
+
 
 - (void)decorateUI{
     [self.view setBackgroundColor:[UIColor colorFromHexCode:@"e0e0d8"]];

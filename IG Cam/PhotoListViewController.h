@@ -13,11 +13,11 @@
 #import "MusicViewController.h"
 #import "SBJson.h"
 #import "SBJsonParser.h"
-
+#import "UIImage+animatedGIF.h"
 #import "PhotoDetailViewController.h"
 #import "FavoriteListViewController.h"
 #import "PhotoDataController.h"
-
+#import "ImageCache.h"
 @interface PhotoListViewController : UIViewController
 {
 
@@ -29,6 +29,6 @@
 @property (strong, nonatomic) PhotoDataController *data_controller;
 @property (strong, nonatomic) NSMutableArray *data_list;
 
-
+@property (strong, nonatomic) ImageCache *image_cache;
 
 @end

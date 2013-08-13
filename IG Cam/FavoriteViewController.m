@@ -168,4 +168,8 @@
                                                   object:nil];
 }
 
+- (IBAction)actionBackToListView:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end

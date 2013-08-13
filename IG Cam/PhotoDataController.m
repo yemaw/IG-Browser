@@ -38,6 +38,12 @@
     
 }
 
+-(NSMutableArray *)loadDataFromNextURL{
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@", self.next_page_url];
+    
+    return [self loadDataFromURLString:urlString];
+}
 
 -(NSMutableString *)loadJSONStringFromURLString:(NSString *)urlString{
     
@@ -56,11 +62,20 @@
     
     
     NSString *responseString = [self loadJSONStringFromURLString:urlString];
+
     //NSLog(@" responseData==> %@",responseString);
     
-    SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+    NSError *error = nil;
+    NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *jsonObjects = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                      options:kNilOptions
+                                                                        error:&error];
     
-    NSDictionary *jsonObjects = [jsonParser objectWithString:responseString];
+    //NSDictionary *jsonObjects = [jsonParser objectWithString:responseString];
+    
+    NSDictionary *pagination = [jsonObjects objectForKey:@"pagination"];
+    self.next_page_url = [pagination objectForKey:@"next_url"];
+    //NSLog(@"next url is %@", self.next_page_url);
     
     NSDictionary *data = [jsonObjects objectForKey:@"data"];
     for(NSDictionary *photo in data){
@@ -70,15 +85,33 @@
         igPhoto.type = [photo objectForKey:@"type"];
         igPhoto.tags = [photo objectForKey:@"tags"];
         
-        if([photo objectForKey:@"location"] != nil){
-            /*
-             igPhoto.location = [[IGLocation alloc]init];
-             igPhoto.location.longitude = [[photo objectForKey:@"location"] objectForKey:@"longitude"];
-             igPhoto.location.latitude  = [[photo objectForKey:@"location"] objectForKey:@"latitude"];
-             */
+        id _location = [photo objectForKey:@"location"];
+        if( _location != nil && ([_location class] != [NSNull class])){
+            IGLocation *location = [[IGLocation alloc]init];
+            
+            id _latitude = [[photo objectForKey:@"location"] objectForKey:@"latitude"];
+            if( _latitude != nil && ([_latitude class] != [NSNull class])){
+                location.latitude = [[photo objectForKey:@"location"] objectForKey:@"latitude"];
+            }
+            
+            id _longitude = [[photo objectForKey:@"location"] objectForKey:@"longitude"];
+            if( _longitude != nil && ([_longitude class] != [NSNull class])){
+                location.longitude = [[photo objectForKey:@"location"] objectForKey:@"longitude"];
+            }
+            
+            id _name = [[photo objectForKey:@"location"] objectForKey:@"name"];
+            if( _name != nil && ([_name class] != [NSNull class])){
+                location.name = [[photo objectForKey:@"location"] objectForKey:@"name"];
+            }
+            
+            id _location_id = [[photo objectForKey:@"location"] objectForKey:@"id"];
+            if( _location_id != nil && ([_location_id class] != [NSNull class])){
+                location.location_id = [[photo objectForKey:@"location"] objectForKey:@"id"];
+            }
+            
+            igPhoto.location = location;
         }
-        
-        
+                
         igPhoto.comments_count = [[[photo objectForKey:@"comments"] objectForKey:@"count"] integerValue];
         igPhoto.comments_rawdata = [[photo objectForKey:@"comments"] objectForKey:@"data"];
         
@@ -87,7 +120,14 @@
         
         igPhoto.created_time_rawdata = [photo objectForKey:@"created_time"];
         
-        igPhoto.caption_text = [[photo objectForKey:@"caption"] objectForKey:@"text"];
+        id _caption = [photo objectForKey:@"caption"];
+        if( _caption != nil && ([_caption class] != [NSNull class])){
+            id _text = [[photo objectForKey:@"caption"] objectForKey:@"text"];
+            if( _text != nil && ([_text class] != [NSNull class])){
+                igPhoto.caption_text = [[photo objectForKey:@"caption"] objectForKey:@"text"];
+            }
+        }
+        
         
         igPhoto.link = [photo objectForKey:@"link"];
         

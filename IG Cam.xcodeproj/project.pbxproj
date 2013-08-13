@@ -9,6 +9,35 @@
 /* Begin PBXBuildFile section */
 		C909EA2117B4E038002E1059 /* comment_shape.png in Resources */ = {isa = PBXBuildFile; fileRef = C909EA2017B4E038002E1059 /* comment_shape.png */; };
 		C909EA2317B4E0A2002E1059 /* heart_shape.png in Resources */ = {isa = PBXBuildFile; fileRef = C909EA2217B4E0A2002E1059 /* heart_shape.png */; };
+		C938E10D17BA042C00167F44 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C938E0FA17BA042C00167F44 /* SBJsonParser.m */; };
+		C938E10E17BA042C00167F44 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C938E0FC17BA042C00167F44 /* SBJsonStreamParser.m */; };
+		C938E10F17BA042C00167F44 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = C938E0FE17BA042C00167F44 /* SBJsonStreamParserAccumulator.m */; };
+		C938E11017BA042C00167F44 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C938E10017BA042C00167F44 /* SBJsonStreamParserAdapter.m */; };
+		C938E11117BA042C00167F44 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = C938E10217BA042C00167F44 /* SBJsonStreamParserState.m */; };
+		C938E11217BA042C00167F44 /* SBJsonStreamTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = C938E10417BA042C00167F44 /* SBJsonStreamTokeniser.m */; };
+		C938E11317BA042C00167F44 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C938E10617BA042C00167F44 /* SBJsonStreamWriter.m */; };
+		C938E11417BA042C00167F44 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = C938E10817BA042C00167F44 /* SBJsonStreamWriterAccumulator.m */; };
+		C938E11517BA042C00167F44 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = C938E10A17BA042C00167F44 /* SBJsonStreamWriterState.m */; };
+		C938E11617BA042C00167F44 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C938E10C17BA042C00167F44 /* SBJsonWriter.m */; };
+		C938E11917BA045000167F44 /* MGInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = C938E11817BA045000167F44 /* MGInstagram.m */; };
+		C962681217B8B68100B5D3B3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C962681117B8B68100B5D3B3 /* MapKit.framework */; };
+		C962681517B8DA9F00B5D3B3 /* PhotoUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C962681417B8DA9F00B5D3B3 /* PhotoUploadViewController.m */; };
+		C962681917B8DED700B5D3B3 /* upload.png in Resources */ = {isa = PBXBuildFile; fileRef = C962681817B8DED700B5D3B3 /* upload.png */; };
+		C962681F17B8E63D00B5D3B3 /* sendto.png in Resources */ = {isa = PBXBuildFile; fileRef = C962681E17B8E63D00B5D3B3 /* sendto.png */; };
+		C962683417B9302700B5D3B3 /* pinmark.png in Resources */ = {isa = PBXBuildFile; fileRef = C962683317B9302700B5D3B3 /* pinmark.png */; };
+		C962683717B9355700B5D3B3 /* PhotoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C962683617B9355700B5D3B3 /* PhotoMapViewController.m */; };
+		C962683B17B937C200B5D3B3 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C962683A17B937C200B5D3B3 /* MapAnnotation.m */; };
+		C962683F17B9435F00B5D3B3 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = C962683E17B9435F00B5D3B3 /* camera.png */; };
+		C962684317B946C300B5D3B3 /* pause_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = C962684217B946C300B5D3B3 /* pause_btn.png */; };
+		C962684617B94B9100B5D3B3 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C962684517B94B9100B5D3B3 /* ImageCache.m */; };
+		C962684817B9514F00B5D3B3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C962684717B9514F00B5D3B3 /* SystemConfiguration.framework */; };
+		C962684A17B9515400B5D3B3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C962684917B9515400B5D3B3 /* GameKit.framework */; };
+		C962684C17B9515900B5D3B3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C962684B17B9515900B5D3B3 /* CFNetwork.framework */; };
+		C962684E17B957BE00B5D3B3 /* loding.gif in Resources */ = {isa = PBXBuildFile; fileRef = C962684D17B957BE00B5D3B3 /* loding.gif */; };
+		C962685117B95BFC00B5D3B3 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C962685017B95BFC00B5D3B3 /* UIImage+animatedGIF.m */; };
+		C962685317B95C7800B5D3B3 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C962685217B95C7800B5D3B3 /* ImageIO.framework */; };
+		C9CABA7E17BA061500B0ECB8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CABA7C17BA061500B0ECB8 /* icon.png */; };
+		C9CABA7F17BA061500B0ECB8 /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CABA7D17BA061500B0ECB8 /* icon114.png */; };
 		C9D4B00817B5081E00E357AE /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D4B00717B5081E00E357AE /* WelcomeViewController.m */; };
 		C9D4B00B17B5099200E357AE /* LoginWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D4B00A17B5099200E357AE /* LoginWebViewController.m */; };
 		C9D4B01117B51BBE00E357AE /* signin_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D4B01017B51BBE00E357AE /* signin_btn.png */; };
@@ -18,18 +47,6 @@
 		C9D4B01E17B53F5E00E357AE /* zombies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9D4B01D17B53F5E00E357AE /* zombies.mp3 */; };
 		C9D4B02217B54A4F00E357AE /* play_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D4B02117B54A4F00E357AE /* play_btn.png */; };
 		C9D4B02417B54D8E00E357AE /* play_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D4B02317B54D8E00E357AE /* play_logo.png */; };
-		C9D4B03A17B5610F00E357AE /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D4B02717B5610F00E357AE /* SBJsonParser.m */; };
-		C9D4B03B17B5610F00E357AE /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D4B02917B5610F00E357AE /* SBJsonStreamParser.m */; };
-		C9D4B03C17B5610F00E357AE /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D4B02B17B5610F00E357AE /* SBJsonStreamParserAccumulator.m */; };
-		C9D4B03D17B5610F00E357AE /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D4B02D17B5610F00E357AE /* SBJsonStreamParserAdapter.m */; };
-		C9D4B03E17B5610F00E357AE /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D4B02F17B5610F00E357AE /* SBJsonStreamParserState.m */; };
-		C9D4B03F17B5610F00E357AE /* SBJsonStreamTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D4B03117B5610F00E357AE /* SBJsonStreamTokeniser.m */; };
-		C9D4B04017B5610F00E357AE /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D4B03317B5610F00E357AE /* SBJsonStreamWriter.m */; };
-		C9D4B04117B5610F00E357AE /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D4B03517B5610F00E357AE /* SBJsonStreamWriterAccumulator.m */; };
-		C9D4B04217B5610F00E357AE /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D4B03717B5610F00E357AE /* SBJsonStreamWriterState.m */; };
-		C9D4B04317B5610F00E357AE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D4B03917B5610F00E357AE /* SBJsonWriter.m */; };
-		C9D4B04617B5617F00E357AE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D4B04417B5617F00E357AE /* icon.png */; };
-		C9D4B04717B5617F00E357AE /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D4B04517B5617F00E357AE /* icon114.png */; };
 		C9F257D017B0822C0000CD36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F257CF17B0822C0000CD36 /* UIKit.framework */; };
 		C9F257D217B0822C0000CD36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F257D117B0822C0000CD36 /* Foundation.framework */; };
 		C9F257D417B0822C0000CD36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F257D317B0822C0000CD36 /* CoreGraphics.framework */; };
@@ -90,6 +107,52 @@
 /* Begin PBXFileReference section */
 		C909EA2017B4E038002E1059 /* comment_shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment_shape.png; sourceTree = "<group>"; };
 		C909EA2217B4E0A2002E1059 /* heart_shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_shape.png; sourceTree = "<group>"; };
+		C938E0F817BA042C00167F44 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJson.h; path = SBJson/SBJson.h; sourceTree = "<group>"; };
+		C938E0F917BA042C00167F44 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonParser.h; path = SBJson/SBJsonParser.h; sourceTree = "<group>"; };
+		C938E0FA17BA042C00167F44 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonParser.m; path = SBJson/SBJsonParser.m; sourceTree = "<group>"; };
+		C938E0FB17BA042C00167F44 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParser.h; path = SBJson/SBJsonStreamParser.h; sourceTree = "<group>"; };
+		C938E0FC17BA042C00167F44 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParser.m; path = SBJson/SBJsonStreamParser.m; sourceTree = "<group>"; };
+		C938E0FD17BA042C00167F44 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParserAccumulator.h; path = SBJson/SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		C938E0FE17BA042C00167F44 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParserAccumulator.m; path = SBJson/SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		C938E0FF17BA042C00167F44 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParserAdapter.h; path = SBJson/SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		C938E10017BA042C00167F44 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParserAdapter.m; path = SBJson/SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		C938E10117BA042C00167F44 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParserState.h; path = SBJson/SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		C938E10217BA042C00167F44 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParserState.m; path = SBJson/SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		C938E10317BA042C00167F44 /* SBJsonStreamTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamTokeniser.h; path = SBJson/SBJsonStreamTokeniser.h; sourceTree = "<group>"; };
+		C938E10417BA042C00167F44 /* SBJsonStreamTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamTokeniser.m; path = SBJson/SBJsonStreamTokeniser.m; sourceTree = "<group>"; };
+		C938E10517BA042C00167F44 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamWriter.h; path = SBJson/SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		C938E10617BA042C00167F44 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamWriter.m; path = SBJson/SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		C938E10717BA042C00167F44 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamWriterAccumulator.h; path = SBJson/SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		C938E10817BA042C00167F44 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamWriterAccumulator.m; path = SBJson/SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		C938E10917BA042C00167F44 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamWriterState.h; path = SBJson/SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		C938E10A17BA042C00167F44 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamWriterState.m; path = SBJson/SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		C938E10B17BA042C00167F44 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = SBJson/SBJsonWriter.h; sourceTree = "<group>"; };
+		C938E10C17BA042C00167F44 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = SBJson/SBJsonWriter.m; sourceTree = "<group>"; };
+		C938E11717BA045000167F44 /* MGInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGInstagram.h; path = "IG Cam/MGInstagram.h"; sourceTree = "<group>"; };
+		C938E11817BA045000167F44 /* MGInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGInstagram.m; path = "IG Cam/MGInstagram.m"; sourceTree = "<group>"; };
+		C962681117B8B68100B5D3B3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C962681317B8DA9F00B5D3B3 /* PhotoUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoUploadViewController.h; sourceTree = "<group>"; };
+		C962681417B8DA9F00B5D3B3 /* PhotoUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoUploadViewController.m; sourceTree = "<group>"; };
+		C962681817B8DED700B5D3B3 /* upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upload.png; sourceTree = "<group>"; };
+		C962681E17B8E63D00B5D3B3 /* sendto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sendto.png; sourceTree = "<group>"; };
+		C962683317B9302700B5D3B3 /* pinmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinmark.png; sourceTree = "<group>"; };
+		C962683517B9355700B5D3B3 /* PhotoMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoMapViewController.h; sourceTree = "<group>"; };
+		C962683617B9355700B5D3B3 /* PhotoMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoMapViewController.m; sourceTree = "<group>"; };
+		C962683917B937C200B5D3B3 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		C962683A17B937C200B5D3B3 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
+		C962683E17B9435F00B5D3B3 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		C962684217B946C300B5D3B3 /* pause_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_btn.png; sourceTree = "<group>"; };
+		C962684417B94B9100B5D3B3 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		C962684517B94B9100B5D3B3 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
+		C962684717B9514F00B5D3B3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C962684917B9515400B5D3B3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		C962684B17B9515900B5D3B3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C962684D17B957BE00B5D3B3 /* loding.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loding.gif; path = ../../loding.gif; sourceTree = "<group>"; };
+		C962684F17B95BFC00B5D3B3 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+animatedGIF.h"; path = "../../untitled folder/UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		C962685017B95BFC00B5D3B3 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+animatedGIF.m"; path = "../../untitled folder/UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		C962685217B95C7800B5D3B3 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		C9CABA7C17BA061500B0ECB8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		C9CABA7D17BA061500B0ECB8 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
 		C9D4B00617B5081E00E357AE /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		C9D4B00717B5081E00E357AE /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		C9D4B00917B5099200E357AE /* LoginWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginWebViewController.h; sourceTree = "<group>"; };
@@ -103,29 +166,6 @@
 		C9D4B01D17B53F5E00E357AE /* zombies.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zombies.mp3; sourceTree = "<group>"; };
 		C9D4B02117B54A4F00E357AE /* play_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_btn.png; sourceTree = "<group>"; };
 		C9D4B02317B54D8E00E357AE /* play_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_logo.png; sourceTree = "<group>"; };
-		C9D4B02517B5610F00E357AE /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJson.h; path = SBJSON/SBJson.h; sourceTree = "<group>"; };
-		C9D4B02617B5610F00E357AE /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonParser.h; path = SBJSON/SBJsonParser.h; sourceTree = "<group>"; };
-		C9D4B02717B5610F00E357AE /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonParser.m; path = SBJSON/SBJsonParser.m; sourceTree = "<group>"; };
-		C9D4B02817B5610F00E357AE /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParser.h; path = SBJSON/SBJsonStreamParser.h; sourceTree = "<group>"; };
-		C9D4B02917B5610F00E357AE /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParser.m; path = SBJSON/SBJsonStreamParser.m; sourceTree = "<group>"; };
-		C9D4B02A17B5610F00E357AE /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParserAccumulator.h; path = SBJSON/SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
-		C9D4B02B17B5610F00E357AE /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParserAccumulator.m; path = SBJSON/SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
-		C9D4B02C17B5610F00E357AE /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParserAdapter.h; path = SBJSON/SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
-		C9D4B02D17B5610F00E357AE /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParserAdapter.m; path = SBJSON/SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
-		C9D4B02E17B5610F00E357AE /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParserState.h; path = SBJSON/SBJsonStreamParserState.h; sourceTree = "<group>"; };
-		C9D4B02F17B5610F00E357AE /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParserState.m; path = SBJSON/SBJsonStreamParserState.m; sourceTree = "<group>"; };
-		C9D4B03017B5610F00E357AE /* SBJsonStreamTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamTokeniser.h; path = SBJSON/SBJsonStreamTokeniser.h; sourceTree = "<group>"; };
-		C9D4B03117B5610F00E357AE /* SBJsonStreamTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamTokeniser.m; path = SBJSON/SBJsonStreamTokeniser.m; sourceTree = "<group>"; };
-		C9D4B03217B5610F00E357AE /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamWriter.h; path = SBJSON/SBJsonStreamWriter.h; sourceTree = "<group>"; };
-		C9D4B03317B5610F00E357AE /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamWriter.m; path = SBJSON/SBJsonStreamWriter.m; sourceTree = "<group>"; };
-		C9D4B03417B5610F00E357AE /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamWriterAccumulator.h; path = SBJSON/SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
-		C9D4B03517B5610F00E357AE /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamWriterAccumulator.m; path = SBJSON/SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
-		C9D4B03617B5610F00E357AE /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamWriterState.h; path = SBJSON/SBJsonStreamWriterState.h; sourceTree = "<group>"; };
-		C9D4B03717B5610F00E357AE /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamWriterState.m; path = SBJSON/SBJsonStreamWriterState.m; sourceTree = "<group>"; };
-		C9D4B03817B5610F00E357AE /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = SBJSON/SBJsonWriter.h; sourceTree = "<group>"; };
-		C9D4B03917B5610F00E357AE /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = SBJSON/SBJsonWriter.m; sourceTree = "<group>"; };
-		C9D4B04417B5617F00E357AE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		C9D4B04517B5617F00E357AE /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
 		C9F257CC17B0822C0000CD36 /* IG Cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IG Cam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F257CF17B0822C0000CD36 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9F257D117B0822C0000CD36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -223,6 +263,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C962685317B95C7800B5D3B3 /* ImageIO.framework in Frameworks */,
+				C962684C17B9515900B5D3B3 /* CFNetwork.framework in Frameworks */,
+				C962684A17B9515400B5D3B3 /* GameKit.framework in Frameworks */,
+				C962684817B9514F00B5D3B3 /* SystemConfiguration.framework in Frameworks */,
+				C962681217B8B68100B5D3B3 /* MapKit.framework in Frameworks */,
 				C9D4B01817B53BC500E357AE /* AVFoundation.framework in Frameworks */,
 				C9D4B01317B52A8E00E357AE /* MessageUI.framework in Frameworks */,
 				C9F2592D17B3D9A60000CD36 /* libsqlite3.0.dylib in Frameworks */,
@@ -237,6 +282,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C962681A17B8E4A000B5D3B3 /* MGInstagram */ = {
+			isa = PBXGroup;
+			children = (
+				C938E11717BA045000167F44 /* MGInstagram.h */,
+				C938E11817BA045000167F44 /* MGInstagram.m */,
+			);
+			name = MGInstagram;
+			sourceTree = "<group>";
+		};
+		C962683817B9374300B5D3B3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C962684F17B95BFC00B5D3B3 /* UIImage+animatedGIF.h */,
+				C962685017B95BFC00B5D3B3 /* UIImage+animatedGIF.m */,
+				C962683917B937C200B5D3B3 /* MapAnnotation.h */,
+				C962683A17B937C200B5D3B3 /* MapAnnotation.m */,
+				C962684417B94B9100B5D3B3 /* ImageCache.h */,
+				C962684517B94B9100B5D3B3 /* ImageCache.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		C9F257C317B0822C0000CD36 = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +325,11 @@
 		C9F257CE17B0822C0000CD36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C962685217B95C7800B5D3B3 /* ImageIO.framework */,
+				C962684B17B9515900B5D3B3 /* CFNetwork.framework */,
+				C962684917B9515400B5D3B3 /* GameKit.framework */,
+				C962684717B9514F00B5D3B3 /* SystemConfiguration.framework */,
+				C962681117B8B68100B5D3B3 /* MapKit.framework */,
 				C9D4B01B17B53EA300E357AE /* AudioToolbox.framework */,
 				C9D4B01717B53BC500E357AE /* AVFoundation.framework */,
 				C9D4B01217B52A8D00E357AE /* MessageUI.framework */,
@@ -280,6 +352,7 @@
 				C9F2580517B0A21C0000CD36 /* AppGlobal.m */,
 				C9F258E817B1DCAF0000CD36 /* DataControllers */,
 				C9F257F217B083250000CD36 /* ViewControllers */,
+				C962683817B9374300B5D3B3 /* Utils */,
 				C9F2582817B0D9CF0000CD36 /* Models */,
 				C9F257F617B09BBA0000CD36 /* UIViews */,
 				C9F257D617B0822C0000CD36 /* Supporting Files */,
@@ -290,12 +363,18 @@
 		C9F257D617B0822C0000CD36 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9CABA7C17BA061500B0ECB8 /* icon.png */,
+				C9CABA7D17BA061500B0ECB8 /* icon114.png */,
+				C962684D17B957BE00B5D3B3 /* loding.gif */,
+				C962684217B946C300B5D3B3 /* pause_btn.png */,
+				C962683E17B9435F00B5D3B3 /* camera.png */,
+				C962683317B9302700B5D3B3 /* pinmark.png */,
+				C962681E17B8E63D00B5D3B3 /* sendto.png */,
+				C962681817B8DED700B5D3B3 /* upload.png */,
 				C9D4B02317B54D8E00E357AE /* play_logo.png */,
 				C9D4B02117B54A4F00E357AE /* play_btn.png */,
 				C9D4B01D17B53F5E00E357AE /* zombies.mp3 */,
 				C9D4B01017B51BBE00E357AE /* signin_btn.png */,
-				C9D4B04417B5617F00E357AE /* icon.png */,
-				C9D4B04517B5617F00E357AE /* icon114.png */,
 				C909EA2217B4E0A2002E1059 /* heart_shape.png */,
 				C909EA2017B4E038002E1059 /* comment_shape.png */,
 				C9F2593017B3E8AB0000CD36 /* favorite_btn.png */,
@@ -328,6 +407,10 @@
 				C9D4B00A17B5099200E357AE /* LoginWebViewController.m */,
 				C9D4B01417B53B9500E357AE /* MusicViewController.h */,
 				C9D4B01517B53B9500E357AE /* MusicViewController.m */,
+				C962681317B8DA9F00B5D3B3 /* PhotoUploadViewController.h */,
+				C962681417B8DA9F00B5D3B3 /* PhotoUploadViewController.m */,
+				C962683517B9355700B5D3B3 /* PhotoMapViewController.h */,
+				C962683617B9355700B5D3B3 /* PhotoMapViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -343,6 +426,7 @@
 		C9F2580717B0A6790000CD36 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C962681A17B8E4A000B5D3B3 /* MGInstagram */,
 				C9F2588417B0EE5B0000CD36 /* FlatUIKit */,
 				C9F2580817B0A6900000CD36 /* SBJSON */,
 			);
@@ -352,27 +436,27 @@
 		C9F2580817B0A6900000CD36 /* SBJSON */ = {
 			isa = PBXGroup;
 			children = (
-				C9D4B02517B5610F00E357AE /* SBJson.h */,
-				C9D4B02617B5610F00E357AE /* SBJsonParser.h */,
-				C9D4B02717B5610F00E357AE /* SBJsonParser.m */,
-				C9D4B02817B5610F00E357AE /* SBJsonStreamParser.h */,
-				C9D4B02917B5610F00E357AE /* SBJsonStreamParser.m */,
-				C9D4B02A17B5610F00E357AE /* SBJsonStreamParserAccumulator.h */,
-				C9D4B02B17B5610F00E357AE /* SBJsonStreamParserAccumulator.m */,
-				C9D4B02C17B5610F00E357AE /* SBJsonStreamParserAdapter.h */,
-				C9D4B02D17B5610F00E357AE /* SBJsonStreamParserAdapter.m */,
-				C9D4B02E17B5610F00E357AE /* SBJsonStreamParserState.h */,
-				C9D4B02F17B5610F00E357AE /* SBJsonStreamParserState.m */,
-				C9D4B03017B5610F00E357AE /* SBJsonStreamTokeniser.h */,
-				C9D4B03117B5610F00E357AE /* SBJsonStreamTokeniser.m */,
-				C9D4B03217B5610F00E357AE /* SBJsonStreamWriter.h */,
-				C9D4B03317B5610F00E357AE /* SBJsonStreamWriter.m */,
-				C9D4B03417B5610F00E357AE /* SBJsonStreamWriterAccumulator.h */,
-				C9D4B03517B5610F00E357AE /* SBJsonStreamWriterAccumulator.m */,
-				C9D4B03617B5610F00E357AE /* SBJsonStreamWriterState.h */,
-				C9D4B03717B5610F00E357AE /* SBJsonStreamWriterState.m */,
-				C9D4B03817B5610F00E357AE /* SBJsonWriter.h */,
-				C9D4B03917B5610F00E357AE /* SBJsonWriter.m */,
+				C938E0F817BA042C00167F44 /* SBJson.h */,
+				C938E0F917BA042C00167F44 /* SBJsonParser.h */,
+				C938E0FA17BA042C00167F44 /* SBJsonParser.m */,
+				C938E0FB17BA042C00167F44 /* SBJsonStreamParser.h */,
+				C938E0FC17BA042C00167F44 /* SBJsonStreamParser.m */,
+				C938E0FD17BA042C00167F44 /* SBJsonStreamParserAccumulator.h */,
+				C938E0FE17BA042C00167F44 /* SBJsonStreamParserAccumulator.m */,
+				C938E0FF17BA042C00167F44 /* SBJsonStreamParserAdapter.h */,
+				C938E10017BA042C00167F44 /* SBJsonStreamParserAdapter.m */,
+				C938E10117BA042C00167F44 /* SBJsonStreamParserState.h */,
+				C938E10217BA042C00167F44 /* SBJsonStreamParserState.m */,
+				C938E10317BA042C00167F44 /* SBJsonStreamTokeniser.h */,
+				C938E10417BA042C00167F44 /* SBJsonStreamTokeniser.m */,
+				C938E10517BA042C00167F44 /* SBJsonStreamWriter.h */,
+				C938E10617BA042C00167F44 /* SBJsonStreamWriter.m */,
+				C938E10717BA042C00167F44 /* SBJsonStreamWriterAccumulator.h */,
+				C938E10817BA042C00167F44 /* SBJsonStreamWriterAccumulator.m */,
+				C938E10917BA042C00167F44 /* SBJsonStreamWriterState.h */,
+				C938E10A17BA042C00167F44 /* SBJsonStreamWriterState.m */,
+				C938E10B17BA042C00167F44 /* SBJsonWriter.h */,
+				C938E10C17BA042C00167F44 /* SBJsonWriter.m */,
 			);
 			name = SBJSON;
 			sourceTree = "<group>";
@@ -549,8 +633,14 @@
 				C9D4B01E17B53F5E00E357AE /* zombies.mp3 in Resources */,
 				C9D4B02217B54A4F00E357AE /* play_btn.png in Resources */,
 				C9D4B02417B54D8E00E357AE /* play_logo.png in Resources */,
-				C9D4B04617B5617F00E357AE /* icon.png in Resources */,
-				C9D4B04717B5617F00E357AE /* icon114.png in Resources */,
+				C962681917B8DED700B5D3B3 /* upload.png in Resources */,
+				C962681F17B8E63D00B5D3B3 /* sendto.png in Resources */,
+				C962683417B9302700B5D3B3 /* pinmark.png in Resources */,
+				C962683F17B9435F00B5D3B3 /* camera.png in Resources */,
+				C962684317B946C300B5D3B3 /* pause_btn.png in Resources */,
+				C962684E17B957BE00B5D3B3 /* loding.gif in Resources */,
+				C9CABA7E17BA061500B0ECB8 /* icon.png in Resources */,
+				C9CABA7F17BA061500B0ECB8 /* icon114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,16 +686,22 @@
 				C9D4B00817B5081E00E357AE /* WelcomeViewController.m in Sources */,
 				C9D4B00B17B5099200E357AE /* LoginWebViewController.m in Sources */,
 				C9D4B01617B53B9500E357AE /* MusicViewController.m in Sources */,
-				C9D4B03A17B5610F00E357AE /* SBJsonParser.m in Sources */,
-				C9D4B03B17B5610F00E357AE /* SBJsonStreamParser.m in Sources */,
-				C9D4B03C17B5610F00E357AE /* SBJsonStreamParserAccumulator.m in Sources */,
-				C9D4B03D17B5610F00E357AE /* SBJsonStreamParserAdapter.m in Sources */,
-				C9D4B03E17B5610F00E357AE /* SBJsonStreamParserState.m in Sources */,
-				C9D4B03F17B5610F00E357AE /* SBJsonStreamTokeniser.m in Sources */,
-				C9D4B04017B5610F00E357AE /* SBJsonStreamWriter.m in Sources */,
-				C9D4B04117B5610F00E357AE /* SBJsonStreamWriterAccumulator.m in Sources */,
-				C9D4B04217B5610F00E357AE /* SBJsonStreamWriterState.m in Sources */,
-				C9D4B04317B5610F00E357AE /* SBJsonWriter.m in Sources */,
+				C962681517B8DA9F00B5D3B3 /* PhotoUploadViewController.m in Sources */,
+				C962683717B9355700B5D3B3 /* PhotoMapViewController.m in Sources */,
+				C962683B17B937C200B5D3B3 /* MapAnnotation.m in Sources */,
+				C962684617B94B9100B5D3B3 /* ImageCache.m in Sources */,
+				C962685117B95BFC00B5D3B3 /* UIImage+animatedGIF.m in Sources */,
+				C938E10D17BA042C00167F44 /* SBJsonParser.m in Sources */,
+				C938E10E17BA042C00167F44 /* SBJsonStreamParser.m in Sources */,
+				C938E10F17BA042C00167F44 /* SBJsonStreamParserAccumulator.m in Sources */,
+				C938E11017BA042C00167F44 /* SBJsonStreamParserAdapter.m in Sources */,
+				C938E11117BA042C00167F44 /* SBJsonStreamParserState.m in Sources */,
+				C938E11217BA042C00167F44 /* SBJsonStreamTokeniser.m in Sources */,
+				C938E11317BA042C00167F44 /* SBJsonStreamWriter.m in Sources */,
+				C938E11417BA042C00167F44 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				C938E11517BA042C00167F44 /* SBJsonStreamWriterState.m in Sources */,
+				C938E11617BA042C00167F44 /* SBJsonWriter.m in Sources */,
+				C938E11917BA045000167F44 /* MGInstagram.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

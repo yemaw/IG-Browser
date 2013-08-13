@@ -46,6 +46,18 @@
     [AppGlobal asyncLoadImageFromURLString:self.data.image_thumbnail_url toImageView:self.imagecontainer_thumbnail];
 }
 -(void)viewWillAppear:(BOOL)animated{
+    if(self.data.location.name == nil){
+        self.ui_locationplacemark_image.hidden = YES;
+        self.ui_location_text.text = @"";
+    } else {
+        self.ui_location_text.text = self.data.location.name;
+        //adding touchable location link
+        self.ui_location_text.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoPhotoMapView)];
+        [self.ui_location_text addGestureRecognizer:tapGesture];
+    }
+    
+    
     self.ui_likes_text.text = [NSString stringWithFormat:@"%i likes" ,self.data.likes_count];
     self.ui_comments_text.text = [NSString stringWithFormat:@"%i comments" ,self.data.comments_count];
 }
@@ -53,7 +65,15 @@
 
 
 - (void) cutomizeUI{
+    [self.view setBackgroundColor:[UIColor colorFromHexCode:@"e0e0d8"]];
+    
     self.ui_label_username.font = [UIFont boldSystemFontOfSize:15.0f];
+}
+
+-(void) gotoPhotoMapView{
+    PhotoMapViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PhotoMapViewBoardID"];
+    controller.data = self.data;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)showActionSheet:(id)sender //Define method to show action sheet
@@ -64,6 +84,7 @@
     NSString *facebook = @"Share on Facebook";
     NSString *twitter  = @"Share on Twitter";
     NSString *email    = @"Share with Email";
+    NSString *bluetoot    = @"Share with Bluetoot";
     NSString *cancelTitle = @"Cancel";
     
 
@@ -71,7 +92,7 @@
 															 delegate:self
 													cancelButtonTitle:cancelTitle
 											   destructiveButtonTitle:nil
-													otherButtonTitles:favorite, facebook, twitter, email, nil];
+													otherButtonTitles:favorite, facebook, twitter, email, bluetoot, nil];
     [actionSheet setBackgroundColor: [UIColor wetAsphaltColor]];
     [actionSheet showInView:self.view];
 }
@@ -91,6 +112,10 @@
             break;
         case 3:
             [self shareToEmail:nil];
+            break;
+        case 4:
+            NSLog(@"bluetoot gonna share");
+            [self btnSendBT];
             break;
     }
     
@@ -238,19 +263,19 @@
 	switch (result)
 	{
 		case MFMailComposeResultCancelled:
-			NSLog(@"Mail cancelled: you cancelled the operation and no email message was queued");
+			//NSLog(@"Mail cancelled: you cancelled the operation and no email message was queued");
 			break;
 		case MFMailComposeResultSaved:
-			NSLog(@"Mail saved: you saved the email message in the Drafts folder");
+			//NSLog(@"Mail saved: you saved the email message in the Drafts folder");
 			break;
 		case MFMailComposeResultSent:
-			NSLog(@"Mail send: the email message is queued in the outbox. It is ready to send the next time the user connects to email");
+			//NSLog(@"Mail send: the email message is queued in the outbox. It is ready to send the next time the user connects to email");
 			break;
 		case MFMailComposeResultFailed:
-			NSLog(@"Mail failed: the email message was nog saved or queued, possibly due to an error");
+			//NSLog(@"Mail failed: the email message was nog saved or queued, possibly due to an error");
 			break;
 		default:
-			NSLog(@"Mail not sent");
+			//NSLog(@"Mail not sent");
 			break;
 	}
     
@@ -261,6 +286,97 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)actionBackToListView:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+
+//***** Bluetoot sharing Feature *** ///
+-(void)btnConnectBT {
+        NSLog(@"connecting 1");
+    self.picker = [[GKPeerPickerController alloc] init];
+    self.picker.delegate = self;
+    self.picker.connectionTypesMask = GKPeerPickerConnectionTypeNearby;
+	
+    //[self.connectBT setHidden:YES];
+    //[self.disconnectBT setHidden:NO];
+    [self.picker show];
+    NSLog(@"connecting");
+}
+
+-(void)peerPickerController:(GKPeerPickerController *)pk didConnectPeer:(NSString *)peerID toSession:(GKSession *)session {
+    self.currentSession = session;
+    session.delegate = self;
+    [session setDataReceiveHandler:self withContext:nil];
+    self.picker.delegate = nil;
+    [self.picker dismiss];
+}
+
+-(void)peerPickerControllerDidCancel:(GKPeerPickerController *)pk {
+    self.picker.delegate = nil;
+}
+
+-(void) btnDisconnectBT {
+    [self.currentSession disconnectFromAllPeers];
+
+    self.currentSession = nil;
+}
+
+- (void)session:(GKSession *)session  didFailWithError:(NSError *)error {
+	NSLog(@"%@", [error description]);
+}
+
+-(void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state {
+    /*
+    switch (state) {
+        case GKPeerStateConnected:
+            NSLog(@"connected");
+            break;
+			
+		case GKPeerStateDisconnected:
+            NSLog(@"disconnected");
+            
+            self.currentSession = nil;
+            break;
+    }
+     */
+}
+- (void) mySendDataToPeers:(NSData *) data {
+    if (self.currentSession)
+        [self.currentSession sendDataToAllPeers:data
+                                   withDataMode:GKSendDataReliable
+                                          error:nil];
+}
+
+-(void) btnSendBT {
+    [self btnConnectBT];//
+    //—-convert an NSString object to NSData—-
+    NSData *data = UIImagePNGRepresentation(self.ui_image_image.image);
+    [self mySendDataToPeers:data];
+}
+
+- (void) receiveData:(NSData *)data
+            fromPeer:(NSString *)peer
+           inSession:(GKSession *)session
+             context:(void *)context {
+	
+    //—-convert the NSData to NSImage—-
+    UIImage *image;
+    image = [UIImage imageWithData:data];
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Image received"
+                                                    message:@""
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+-(void) doneEditing:(id) sender {
+	[sender resignFirstResponder];
 }
 
 @end

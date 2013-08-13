@@ -11,9 +11,7 @@
 @implementation AppGlobal
 
 +(NSString *)getToken{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    return [defaults objectForKey:@"access_token"];
-    //return @"42729168.6c6980e.f0d86419d71b45978f4a52da633c38aa";
+    return @"42729168.6c6980e.f0d86419d71b45978f4a52da633c38aa";
 }
 
 +(void)asyncLoadImageFromURLString:(NSString *)urlString toImageView:(UIImageView *)imageView{
@@ -73,7 +71,6 @@
         
         //*BOOL userDidCancel = [errorReason isEqualToString:@"user_denied"];
         //*[self igDidNotLogin:userDidCancel];
-        NSLog(@"login not ok");
         return NO;
     }
     
@@ -88,12 +85,8 @@
     //    }
     
     //[self igDidLogin:accessToken/* expirationDate:expirationDate*/];
-    NSLog(@"login ok");
-    NSLog(@"token key -> %@", accessToken);
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:accessToken forKey:@"access_token"];
-    [defaults synchronize];
-    NSLog(@"save key -> %@", [defaults objectForKey:@"access_token"]);
     return YES;
 }
 

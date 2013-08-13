@@ -10,7 +10,6 @@
 #import "AppGlobal.h"
 #import "WelcomeViewController.h"
 #import "PhotoDataController.h"
-#import "PhotoListViewController.h"
 
 @implementation AppDelegate
 
@@ -30,13 +29,16 @@
     [self.audioPlayer prepareToPlay];
     
     PhotoDataController *photoDataController = [[PhotoDataController alloc]init];
+    
     if([photoDataController testAccessToken] == NO){
+        NSLog(@"token not ok");
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
                                                                  bundle: nil];
         
         
         WelcomeViewController *loginController = (WelcomeViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"PhotoListNavigationControllerBoardID"];
         self.window.rootViewController = loginController;
+        
     }
     
     return YES;
@@ -61,12 +63,13 @@
 }
 */
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-//    NSLog(@"==> %@", [url description]);
+    NSLog(@"handling opened url");
     if([AppGlobal handleOpenURL:url]){
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard"
                                                                  bundle: nil];
         
-        PhotoListViewController *loginController = (PhotoListViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"PhotoListNavigationControllerBoardID"];
+        
+        WelcomeViewController *loginController = (WelcomeViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"PhotoListNavigationControllerBoardID"];
         self.window.rootViewController = loginController;
     }
     

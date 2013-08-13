@@ -10,6 +10,7 @@
 #import "IGUser.h"
 #import "IGComment.h"
 #import "IGLocation.h"
+#import <MapKit/MapKit.h>
 
 @interface IGPhoto : NSObject
 {
@@ -22,6 +23,7 @@
 @property (nonatomic) NSMutableArray *tags;
 
 @property (nonatomic) IGLocation *location;
+
 
 @property int comments_count;
 @property (nonatomic) NSMutableArray *comments_rawdata;
